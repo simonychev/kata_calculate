@@ -16,7 +16,7 @@ public class Main {
         System.out.println("Введите выражение:  (для выхода наберите exit)");
         Scanner console = new Scanner(System.in);
         String enter = console.nextLine();
-        if (enter == "exit") {
+        if (enter.equals("exit")) {
             return;
         }
         try {
