@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -51,13 +50,13 @@ public class Main {
     }
 
     private static int process(int number1, int number2, String action) throws Exception {
-        return switch (action) {
-            case "+" -> number1 + number2;
-            case "-" -> number1 - number2;
-            case "*" -> number1 * number2;
-            case "/" -> number1 / number2;
-            default -> throw new Exception("не верное действие");
-        };
+        switch (action) {
+            case "+": return number1 + number2;
+            case "-": return number1 - number2;
+            case "*": return number1 * number2;
+            case "/": return number1 / number2;
+            default: throw new Exception("не верное действие");
+        }
     }
 
     public static boolean isNumeric(String str) {
@@ -70,19 +69,19 @@ public class Main {
     }
 
     private static int romanToNumber(String roman) throws Exception {
-        return switch (roman) {
-            case "I" -> 1;
-            case "II" -> 2;
-            case "III" -> 3;
-            case "IV" -> 4;
-            case "V" -> 5;
-            case "VI" -> 6;
-            case "VII" -> 7;
-            case "VIII" -> 8;
-            case "IX" -> 9;
-            case "X" -> 10;
-            default -> throw new Exception("Должны быть введены римские числа от I до X, либо арабские от 1 до 10");
-        };
+        switch (roman) {
+            case "I": return 1;
+            case "II": return 2;
+            case "III": return 3;
+            case "IV": return 4;
+            case "V": return 5;
+            case "VI": return 6;
+            case "VII": return 7;
+            case "VIII": return 8;
+            case "IX": return 9;
+            case "X": return 10;
+            default: throw new Exception("Должны быть введены римские числа от I до X, либо арабские от 1 до 10");
+        }
     }
 
     private static String numToRoman(int numArabian) throws Exception {
